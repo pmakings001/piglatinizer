@@ -5,8 +5,17 @@
 // CREATE THE FUNCTIONS BELOW
 
 // Document Ready Function. All of your jQuery should go in here. 
-$( document ).ready(function() {
+$(document).ready(function() {
+	
   
+$("#submitbutton").click(function()
+{
+	console.log("I'm here");
+	var firstlatin = $("#textbox").val();
+	var newWord = wordToPigLatin(firstlatin);
+	$("#output").text(newWord)
+}
+);
 
 
 
@@ -14,7 +23,10 @@ $( document ).ready(function() {
 
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
-
+function wordToPigLatin(word)
+{
+	return word + "ay";
+}
 
 
 
