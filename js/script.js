@@ -12,8 +12,8 @@ $("#submitbutton").click(function()
 {
 	console.log("I'm here");
 	var firstlatin = $("#textbox").val();
-	var newWord = wordToPigLatin(firstlatin);
-	$("#output").text(newWord)
+	var newWord = sentenceToPigLatin(firstlatin);
+	
 }
 );
 
@@ -32,8 +32,21 @@ function wordToPigLatin(word)
 
 
 
+
+
 // Create the sentenceToPigLatin function that takes a sentence as a parameter
 	//Loops through all the words in the sentence and transforms each word
 	//It should return a transfromed sentance
+function sentenceToPigLatin(sentence)
+{
+	var splitsentence = sentence.split(' ');
+	console.log(splitsentence);
+	
+	for (var count = 0; count < splitsentence.length; count ++)
+	{
+		var newword = splitsentence[count] + "ay <br />";
+		$("#output").append(newword);	
+	}
 
+}
 
